@@ -19,7 +19,7 @@
    ==================================== */
    @font-face {
     font-family: 'CustomFont';
-    src: url('/founts/alternate-gothic-comp-atf-black.otf') format('truetype');
+    src: url('/fonts/alternate-gothic-comp-atf-black.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
