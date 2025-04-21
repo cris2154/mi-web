@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="img/portfolio.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="menu-toggle">About Me</h1>
+            <ul id="nav-menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#Skill">Personal Skills</a></li>
+                <li><a href="#projet">My Projects</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-header">
+                <h2 id="animated-h2">Crithian Huamani</h2>
+                <h2 id="animated-h2-2">Yataco</h2>
+            </div>
+            <div class="about-description">
+                <p>
+                    Hi! I craft sleek, user-focused experiences that adapt to both your audience and your goals. Specializing in responsive design, intuitive UX/UI, and clean front-end solutions (HTML, CSS, JavaScript + modern frameworks), I merge strategic creativity with cutting-edge tech to build websites that captivate and deliver results. Let’s transform your vision into a dynamic, high-performing online presence.
+                </p>
+            </div>
+        </div>
+        <img src="img/avatar .png" alt="avatar" class="about-image">
+    </section>
+
+    <section id="Skill">
+        <div class="skills-layout">
+            <div class="skills-left">
+                <h2 class="Skill-header" id="animated-skill-h2">Personal Skills</h2>
+            </div>
+            <div class="skills-right">
+                <div class="frontend-section">
+                    <h3>Frontend</h3>
+                    <div class="skill-images">
+                        <div class="skill-item">
+                            <img src="img/js.png" alt="JavaScript" class="skill-image">
+                            <p class="skill-info">Intermediate - 1-2 years of experience</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="img/reac_icom.png" alt="React" class="skill-image">
+                            <p class="skill-info">Entry-level - 1 year of experience</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="img/git_icom.png" alt="Git" class="skill-image">
+                            <p class="skill-info">Entry-level - 6 months of experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backend-section">
+                    <h3>Backend</h3>
+                    <div class="skill-images">
+                        <div class="skill-item">
+                            <img src="img/sql_icom.png" alt="SQL" class="skill-image">
+                            <p class="skill-info">Entry-level - 6 months of experience</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="img/php_icom.png" alt="PHP" class="skill-image">
+                            <p class="skill-info">Entry-level - 1 year of experience</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="img/python_icon.png" alt="Python" class="skill-image">
+                            <p class="skill-info">Intermediate - 1-2 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projet">
+        <div class="projet-content">
+            <div class="projet-header">
+                <h2 class="project-header">
+                    My Projects
+                </h2>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="rectangle">
+                <img src="img/this_pag.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <p>This website is part of my project portfolio.</p>
+                    <p>Built with: HTML, CSS, JavaScript</p>
+                    <div class="link-container">
+                        <a href="https://example.com" target="_blank">
+                            <img src="img/github-mark.png" alt="Link to project" class="link-icon">
+                        </a>
+                        <a href="https://example.com" target="_blank" class="visit-button">Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rectangle coming-soon">
+                <p class="coming-soon-text">Coming Soon</p>
+            </div>
+            <div class="rectangle coming-soon">
+                <p class="coming-soon-text">Coming Soon</p>
+            </div>
+            <div class="rectangle coming-soon">
+                <p class="coming-soon-text">Coming Soon</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-header">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-image-left">
+                <div class="shadow-circle"></div>
+                <img src="/img/gmail.png" alt="Imagen de contacto">
+            </div>
+            <div class="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control thick" placeholder="your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control thick" placeholder="your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control" placeholder="write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Crithian Huamani Portfolio. All rights reserved.</p>
+    </footer>
+
+    <div id="cursor-shadow"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+/**
+ * TABLA DE CONTENIDOS - VERSIÓN MÓVIL:
+ * 1. Media Query Principal 
+ * 2. Header y Navegación
+ * 3. Secciones Principales
+ *    3.1 Sección About
+ *    3.2 Sección Skills
+ *    3.3 Sección Proyectos
+ *    3.4 Sección Contacto
+ * 4. Footer
+ * 5. Utilidades y elementos comunes
+ */
+
+/* Mantener todas las configuraciones globales y fuentes del CSS original */
+
+/* ====================================
+   1. MEDIA QUERY PRINCIPAL
+   ==================================== */
+   @media screen and (max-width: 767px) {
+    /* ====================================
+       2. HEADER Y NAVEGACIÓN
+       ==================================== */
+    header {
+        padding: 0.5rem 0;
+    }
+    
+    header nav {
+        padding: 0 1rem;
+    }
+    
+    header ul {
+        font-size: 1rem;
+        gap: 1.5rem;
+    }
+    
+    header h1 {
+        padding-right: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    #nav-menu {
+        top: 2.5rem;
+        width: 100%;
+    }
+    
+    #nav-menu li {
+        height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #nav-menu li a {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    
+    /* Centrar el botón menu-toggle */
+    #menu-toggle {
+        position: absolute;
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta la posición al centro */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+        color: white; /* Color del ícono o texto */
+        width: 50px; /* Tamaño del botón */
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /* Animación de salida para el título */
+    #menu-toggle.fade-out {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* ====================================
+       3. SECCIONES PRINCIPALES
+       ==================================== */
+    section {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* =================================
+       3.1 SECCIÓN ABOUT
+       ================================= */
+    #about {
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .about-content {
+        max-width: 100%;
+        order: 2; /* Cambia el orden para mostrar imagen primero */
+    }
+    
+    .about-header {
+        margin-top: 1rem;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    #about h2 {
+        font-size: 3.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .about-description {
+        margin-top: 1.5rem;
+        padding-left: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .about-description p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .about-image {
+        max-width: 70%;
+        margin-left: 0;
+        margin-top: 5rem;
+        order: 1; /* Cambia el orden para mostrar imagen primero */
+    }
+    
+    /* =================================
+       3.2 SECCIÓN SKILLS
+       ================================= */
+    #Skill {
+        padding: 2rem 0rem;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .skills-layout {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+    }x
+
+.skills-left {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-left: 6rem;
+    }
+
+    #Skill .Skill-header {
+        font-size: 3rem;
+        position: relative;
+        text-align: center;
+        margin: 0;
+        padding: 1rem 0;
+        line-height: 0;
+    }
+
+    .skills-right {
+        width: 100%;
+        padding: 0rem;
+        padding-top: 2rem;
+        gap: 3rem;
+    }
+
+    /* Sección Frontend y Backend */
+    .frontend-section,
+    .backend-section {
+        width: 100%;
+        padding: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    .frontend-section h3,
+    .backend-section h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    /* Contenedor de imágenes de habilidades */
+    .skill-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Skill items */
+    .skill-item {
+        position: relative;
+        width: 80px;
+        margin: 0.5rem;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid white;
+        filter: grayscale(100%);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+
+    .skill-info {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Estados activos y hover */
+    .skill-item:hover .skill-image,
+    .skill-item.active .skill-image {
+        transform: translateY(-5px);
+        filter: grayscale(0);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .skill-item:hover .skill-info,
+    .skill-item.active .skill-info {
+        opacity: 1;
+    }
+
+    /* Mantener animaciones de letras */
+    .frontend-section h3 span,
+    .backend-section h3 span {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                    text-shadow 0.3s ease;
+    }
+
+    .frontend-section h3 span:hover,
+    .backend-section h3 span:hover {
+        transform: scale(1.3);
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* =================================
+       3.3 SECCIÓN PROYECTOS
+       ================================= */
+    #projet {
+        padding: 1rem 0;
+    }
+    
+    #projet .projet-content {
+        padding: 0 1rem;
+    }
+    
+    #projet .project-header {
+        font-size: 2.5rem;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+    
+    #projet .grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Cambia a una columna */
+        grid-template-rows: repeat(4, 1fr);
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    #projet .rectangle {
+        width: 90%; /* Aumenta el ancho para móviles */
+        height: 180px; /* Altura fija más pequeña */
+        margin: 1rem auto;
+    }
+    
+    #projet .rectangle:first-child img {
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #projet .rectangle .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(40, 38, 38, 0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #projet .rectangle:hover .overlay {
+        opacity: 1;
+    }
+
+    /* Textos del overlay */
+    #projet .rectangle .overlay p {
+        color: white;
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 0.3rem 0;
+        padding: 0 0.5rem;
+    }
+
+    /* Contenedor de enlaces */
+    #projet .rectangle .overlay .link-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    /* Botón de visita */
+    #projet .rectangle .overlay .visit-button {
+        background-color: #000000;
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    #projet .rectangle .overlay .visit-button:hover {
+        transform: scale(1.05);
+        background-color: #333333;
+    }
+
+    /* Icono de enlace */
+    #projet .rectangle .overlay a img.link-icon {
+        width: 35px;
+        height: 35px;
+        transition: transform 0.2s ease, filter 0.2s ease;
+        filter: grayscale(100%);
+    }
+
+    #projet .rectangle .overlay a img.link-icon:hover {
+        transform: scale(1.1);
+        filter: grayscale(0);
+    }
+    
+    #projet .rectangle .overlay p {
+        font-size: 1rem;
+        margin: 0.3rem 0;
+    }
+    
+    #projet .rectangle .overlay .link-container {
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    #projet .rectangle .overlay .visit-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    #projet .rectangle .overlay a img.link-icon {
+        width: 40px;
+        height: 40px;
+        margin-top: 0.5rem;
+    }
+    
+    .rectangle.coming-soon {
+        background-color: #000000;
+        min-height: 180px;
+    }
+    
+    .coming-soon-text {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px); /* Reduce la altura de flotación */
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    /* =================================
+       3.4 SECCIÓN CONTACTO
+       ================================= */
+    #contact {
+        padding: 1rem;
+    }
+    
+    .contact-image-left {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 2rem;
+    }
+    
+    #contact .contact-header {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-container {
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 90%;
+        height: auto;
+        padding: 1.5rem;
+    }
+    
+    form .form-group {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    form .form-control {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    form .btn-submit {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    /* =================================
+       4.4 SECCIÓN CONTACTO MÓVIL
+       ================================= */
+    #contact {
+        padding: 1rem;
+    }
+
+    /* Ajuste del encabezado */
+    #contact .contact-header {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    /* Ajuste del contenedor wrapper */
+    .contact-wrapper {
+        flex-direction: column;
+        padding: 0;
+        margin-top: -2rem;
+        gap: 2rem;
+    }
+
+    /* Ajuste de la imagen */
+    .contact-image-left {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .contact-image-left img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    .contact-image-left .shadow-circle {
+        bottom: -5px;
+        width: 70%;
+    }
+
+    /* Ajuste del formulario */
+    .form-container {
+        width: 90%;
+        max-width: 350px;
+        padding: 1rem;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    #contact-form {
+        gap: 0.8rem;
+    }
+
+    .form-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+        width: 90%;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    textarea.form-control {
+        min-height: 80px;
+        max-height: 80px;
+    }
+
+    .btn-submit {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* ====================================
+       4. FOOTER
+       ==================================== */
+    footer {
+        padding: 0.8rem 0;
+        font-size: 0.8rem;
+    }
+    
+    /* ====================================
+       5. UTILIDADES Y ELEMENTOS COMUNES
+       ==================================== */
+    .grid {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .rectangle {
+        font-size: 1.2rem;
+    }
+    
+    #cursor-shadow {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .section-indicators {
+        right: 10px;
+    }
+    
+    .section-indicator {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Ajustes específicos para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    #about h2 {
+        font-size: 3rem;
+    }
+    
+    .skill-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #projet .rectangle {
+        height: 120px;
+    }
+    
+    .form-container {
+        padding: 1rem;
+    }
+}
