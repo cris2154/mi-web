@@ -29,7 +29,7 @@
    ==================================== */
 /* Estilo base para todo el documento */
 body {
-    font-family: 'AlternateGothic', Arial, sans-serif;
+    font-family: 'CustomFont', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
