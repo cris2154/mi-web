@@ -17,9 +17,16 @@
 /* ====================================
    1. FUENTES PERSONALIZADAS
    ==================================== */
-   @font-face {
-    font-family: 'CustomFont';
-    src: url('/fonts/alternate-gothic.otf') format('truetype');
+@font-face {
+    font-family: 'AlternateGothic';
+    src: url('/fonts/alternate-gothic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlternateGothicDemi';
+    src: url('/fonts/alternate-gothic-demi.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,7 +36,7 @@
    ==================================== */
 /* Estilo base para todo el documento */
 body {
-    font-family: 'CustomFont', Arial, sans-serif;
+    font-family: 'AlternateGothic', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -66,6 +73,11 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+
+/* Aplicar AlternateGothicDemi solo a los párrafos */
+p {
+    font-family: 'AlternateGothicDemi', Arial, sans-serif;
 }
 
 /* Configuración de la barra de navegación */
