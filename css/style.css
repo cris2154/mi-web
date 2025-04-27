@@ -327,7 +327,7 @@ section {
     width: 50%;
     display: flex;
     align-items: center;
-    padding-left: 5%;
+    padding: 2rem;
 }
 
 .skills-right {
@@ -336,21 +336,6 @@ section {
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-}
-
-/* Media query simple para ajuste gradual */
-@media screen and (max-width: 1200px) {
-    .skills-layout {
-        padding: 0 0;
-    }
-
-    .skills-left {
-        padding-left: 2rem;
-    }
-
-    #Skill .Skill-header {
-        font-size: 7rem;
-    }
 }
 
 /* Sección Frontend y Backend */
@@ -776,19 +761,6 @@ textarea.form-control {
 
 .contact-image-left {
     animation: float 3s ease-in-out infinite;
-}
-
-@media screen and (max-width: 768px) {
-    .contact-wrapper {
-        flex-direction: column;
-        padding: 0 1rem;
-    }
-
-    .contact-image-left,
-    .form-container {
-        width: 90%;
-        margin-bottom: 2rem;
-    }
 }
 
 /* ====================================
