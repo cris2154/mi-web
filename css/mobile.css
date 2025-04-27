@@ -199,13 +199,12 @@
     .skills-layout {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: auto;
         height: auto;
-        padding-top: 2rem;
+        padding: 2rem;
     }x
 
 .skills-left {
-        width: 50%;
         text-align: center;
         margin-bottom: 2rem;
         padding-left: 6rem;
