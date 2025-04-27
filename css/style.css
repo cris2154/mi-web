@@ -77,6 +77,7 @@ header {
 
 /* Aplicar AlternateGothicDemi solo a los párrafos */
 p {
+    letter-spacing: 1px;
     font-family: 'AlternateGothicDemi', Arial, sans-serif;
 }
 
@@ -340,7 +341,7 @@ section {
 /* Media query simple para ajuste gradual */
 @media screen and (max-width: 1200px) {
     .skills-layout {
-        padding: 0 1rem;
+        padding: 0 0;
     }
 
     .skills-left {
@@ -990,7 +991,8 @@ footer {
         width: 0;
     }
     to {
-        width: 100%;
+        width: 250%;
+        
     }
 }
 
