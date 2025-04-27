@@ -198,8 +198,6 @@
 
     .skills-left {
         text-align: center;
-        margin-bottom: 2rem;
-        padding-left: 0; /* Eliminar el padding-left */
         width: 100%; /* Ocupar todo el ancho disponible */
     }
 
@@ -208,7 +206,7 @@
         flex-direction: column;
         width: 100%;
         height: auto;
-        padding: 1rem; /* Reducir el padding */
+        padding: 0; /* Reducir el padding */
         align-items: center;
     }
 
@@ -516,6 +514,7 @@
 
     /* Ajuste del contenedor wrapper */
     .contact-wrapper {
+        align-items: center ;
         flex-direction: column;
         padding: 0;
         margin-top: -2rem;
