@@ -181,7 +181,7 @@
     }
     
     .about-image {
-        max-width: 70%;
+        max-width: 40%;
         margin-left: 0;
         margin-top: 5rem;
         order: 1; /* Cambia el orden para mostrar imagen primero */
@@ -597,13 +597,34 @@
         height: 50px;
     }
     
+    /* Corregir posicionamiento de section-indicators */
     .section-indicators {
         right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        position: fixed;
+        width: auto;
     }
-    
+
+    /* Hacer los indicadores más pequeños en móvil */
     .section-indicator {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
+        margin: 5px 0;
+    }
+
+    /* Asegurar que los indicadores estén dentro del viewport */
+    section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Ocultar section-indicators en dispositivos muy pequeños */
+    @media screen and (max-width: 400px) {
+        .section-indicators {
+            display: none;
+        }
     }
 
     /* Forzar layout vertical en modo horizontal */
@@ -621,7 +642,7 @@
 
         #nav-menu {
             position: fixed;
-            width: 50%;
+            width: 100%;
             right: 0;
         }
 
