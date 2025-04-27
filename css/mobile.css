@@ -196,18 +196,20 @@
         overflow: hidden;
     }
 
+    .skills-left {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-left: 0; /* Eliminar el padding-left */
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
     .skills-layout {
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: 100%;
         height: auto;
-        padding: 2rem;
-    }x
-
-.skills-left {
-        text-align: center;
-        margin-bottom: 2rem;
-        padding-left: 6rem;
+        padding: 1rem; /* Reducir el padding */
+        align-items: center;
     }
 
     #Skill .Skill-header {
@@ -216,7 +218,8 @@
         text-align: center;
         margin: 0;
         padding: 1rem 0;
-        line-height: 0;
+        width: 100%; /* Asegurar que el header ocupe todo el ancho */
+        line-height: 1; /* Ajustar el line-height */
     }
 
     .skills-right {
