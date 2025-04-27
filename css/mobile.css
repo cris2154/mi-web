@@ -16,7 +16,7 @@
 /* ====================================
    1. MEDIA QUERY PRINCIPAL
    ==================================== */
-   @media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     /* ====================================
        2. HEADER Y NAVEGACIÓN
        ==================================== */
@@ -518,7 +518,6 @@
         padding: 0;
         margin-top: -2rem;
         gap: 2rem;
-        margin-left: 1rem;
     }
 
     /* Ajuste de la imagen */
@@ -606,9 +605,53 @@
         width: 8px;
         height: 8px;
     }
+
+    /* Forzar layout vertical en modo horizontal */
+    @media screen and (orientation: landscape) {
+        body {
+            min-height: 100vh;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        #nav-menu {
+            position: fixed;
+            width: 50%;
+            right: 0;
+        }
+
+        .about-content,
+        .skills-layout,
+        .projet-content,
+        .contact-wrapper {
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+            padding: 1rem;
+        }
+
+        #about,
+        #Skill,
+        #projet,
+        #contact {
+            padding: 1rem;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+    }
 }
 
-/* Ajustes específicos para pantallas muy pequeñas */
+/* Mantener los ajustes para pantallas muy pequeñas */
 @media screen and (max-width: 400px) {
     #about h2 {
         font-size: 3rem;
