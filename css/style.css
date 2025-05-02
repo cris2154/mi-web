@@ -250,8 +250,8 @@ section {
 
 /* Encabezado de About */
 .about-header {
-    margin-top: 7rem;
-    padding-left: 2rem;
+    margin-top: 17%;
+    padding-left: 15%;
 }
 
 /* Título de About */
@@ -272,7 +272,7 @@ section {
 /* Descripción en About */
 .about-description {
     margin-top: 3rem;
-    padding-left: 4rem;
+    padding-left: 15%;
     max-width: 42rem;
     text-align: left;
 }
